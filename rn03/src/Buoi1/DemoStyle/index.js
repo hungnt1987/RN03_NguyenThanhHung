@@ -67,6 +67,21 @@ export default class DemoStyle extends Component {
                     fontFamily: "Cochin",
                 }}>Yellow: #F4B940</Text>
                 </View>
+                <View style={{
+                    backgroundColor:'#F4B940', 
+                    height: 150, 
+                    justifyContent: 'center', 
+                    alignItems:'center', 
+                    borderRadius: 10,
+                    marginTop: 10,
+                    marginBottom: 10,}}>
+                           
+                <Text style = {{
+                    fontWeight: 'bold',
+                    fontFamily: "Cochin",
+                }}>Yellow: #F4B940</Text>
+                </View>
+                
             </View>
             </ScrollView>
         )
