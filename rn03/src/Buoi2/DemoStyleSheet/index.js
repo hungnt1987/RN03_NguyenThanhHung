@@ -4,65 +4,53 @@ import { Text, View, StyleSheet } from "react-native";
 
 export default class DemoStyleSheet extends React.Component {
     render(){
-        return(
-            <ScrollView>
-            <View style={{marginTop: 50, flex: 1,}}>
+        return (
+            <View style={styles.container}>
                 <View style={styles.boxStyle}>
-                <Text style = {styles.textStyle}>Purple: #C9C9FF</Text>
+                    <Text>Purple: #C9C9FF</Text>
                 </View> 
-                
-                <View style={[styles.boxStyle, styles.boxStyleBlue]}>
-                           
-                <Text style = {styles.textStyle}>Blue: #3D85C6</Text>
+                <View style={[styles.boxStyle, styles.boxBlue]}>
+                    <Text>Blue: #3D85C6</Text>
                 </View>
-
-                <View style={[styles.boxStyle, styles.boxStyleGreen]}>
-                           
-                <Text style = {styles.textStyle}>Green: #96CC96</Text>
+                <View style={[styles.boxStyle, styles.boxGreen]}>
+                    <Text>Green: #96CC96</Text>
                 </View>
-
-                <View style={[styles.boxStyle, styles.boxStyleYellow]}>
-                           
-                <Text style = {styles.textStyle}>Yellow: #F4B940</Text>
+                <View style={[styles.boxStyle, styles.boxYellow]}>
+                    <Text>Yellow: #F4B940</Text>
                 </View>
             </View>
-            </ScrollView>
-        )
+                )
     }
 }
 
-const styles = StyleSheet.create ({
-    boxStyle : {
+const styles = StyleSheet.create({
+    
+    container:{
+       marginTop: 50,
+       paddingHorizontal: 20,
+       flex: 1,
+    },
+
+    boxStyle: {
+        backgroundColor: '#C9C9FF', 
         flex: 1,
         borderRadius: 10,
-        backgroundColor: '#C9C9Ff',
         justifyContent: 'center',
         alignItems: 'center',
-        height: 200,
         marginBottom: 20,
-        marginHorizontal: 10,
-    
+
     },
-    boxStyleBlue : {
-        
+    boxBlue :{
         backgroundColor: '#3D85C6',
-        
-    
     },
-    boxStyleGreen : {
-        
+    
+    boxGreen : {
         backgroundColor: '#96CC96',
-        
-    
     },
-    boxStyleYellow : {
-        
+    
+     
+    boxYellow : {
         backgroundColor: '#F4B940',
-        
-    
     },
-    textStyle : {
-        fontWeight: '900',
-    },
-})
+});
 
