@@ -14,13 +14,13 @@ import React, { Component } from 'react';
 // import DemoTextInput from './src/Buoi2/DemoTextInput';
 // import DemoImages from './src/Buoi2/DemoImages';
 // import BindingData from './src/Buoi3/BindingData';
-import ExUI from './src/Buoi3/BaiTap';
-// import RenderList from './src/Buoi3/RenderList';
+// import ExUI from './src/Buoi3/BaiTap';
+import RenderList from './src/Buoi3/RenderList';
 // stateful component
 class App extends Component {
   render(){
     return(
-    <ExUI/>
+    <RenderList/>
     );
   }
 }

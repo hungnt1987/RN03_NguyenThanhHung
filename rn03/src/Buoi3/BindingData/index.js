@@ -26,11 +26,15 @@ export default class BindingData extends Component {
   };
 
 // Phuong thuc/method onPressButton, su dung arrow function
-  onPressButton= () => {
+  onPressButton= buttonName => {
     
-    console.log('Button HighLight Press');
+    console.log(buttonName + 'Press');
     //setState la ham xu ly bat dong bo
     this.setState({isLogIn:true}, () => {console.log(this.state.isLogIn)});
+  };
+
+  onPressButtonWithParam = () => {
+    this.onPressButton('Opacity');
   };
 
 // Phuong thuc render
@@ -60,10 +64,10 @@ export default class BindingData extends Component {
         </>
         ) }
 
-        <TouchableOpacity style={styles.btn} onPress = {this.onPressButton}>
+        <TouchableOpacity style={styles.btn} onPress = {this.onPressButtonWithParam}>
           <Text>Sign In</Text>
         </TouchableOpacity>
-        <TouchableHighlight underlayColor="white" style={[styles.btn, styles.btnHightLight]} onPress = {this.onPressButton}>
+        <TouchableHighlight underlayColor="white" style={[styles.btn, styles.btnHightLight]} onPress = {() => this.onPressButton('Highlight')}>
           <Text>Sign In</Text>
         </TouchableHighlight>
       </View>
